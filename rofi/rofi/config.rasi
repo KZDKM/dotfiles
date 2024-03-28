@@ -1,0 +1,4 @@
+@theme "~/.config/rofi/default.rasi"
+configuration {
+	font: "Inter Regular 12";
+}
