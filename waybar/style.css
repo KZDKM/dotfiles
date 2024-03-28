@@ -1,0 +1,113 @@
+* {
+	min-height: 0;
+}
+
+window#waybar {
+	font-family: 'Inter Regular';
+	font-size: 12px;
+	background: transparent;
+	border: none;
+	color: @theme_text_color;
+	background: alpha(@theme_base_color, 0.1);
+}
+
+.modules-left,
+.modules-right {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+/*
+.modules-left {
+	border-radius: 16px 6px 6px 6px;
+}
+
+.modules-right {
+	border-radius: 6px 16px 6px 6px;
+}
+*/
+.modules-center {
+	padding: 0 100px;
+}
+
+#workspaces {
+	background: @theme_base_color;
+	border: 1px solid @unfocused_borders;
+	border-radius: 8px;
+	margin: 0.4em 0.6em;
+	padding: 0 0.6em;
+}
+
+#workspaces button {
+	font-size: 8px;
+	margin: 0;
+	padding: 0 0.3em;
+	color: @unfocused_borders;
+	transition-duration: 0.5s;
+	transition-property: color;
+}
+
+#workspaces button.active {
+	color: @theme_text_color;
+	transition-duration: 1s;
+	transition-property: color;
+}
+
+#taskbar button {
+	opacity: 0;
+	font-size: 0;
+	margin: 0.3em -20px 0.3em 0;
+	padding: 0;
+}
+
+#taskbar button.active {
+	font-size: 12px;
+	margin: 0.3em 0.2em 0.3em 0.2em;
+	padding: 0 0.4em;
+	opacity: 1;
+}
+
+#clock {
+	font-family: 'Inter Extra Bold';
+	margin: 0.3em 0.4em;
+}
+
+#battery,
+#pulseaudio {
+	margin: 0.0em 0.8em;
+}
+
+#battery.critical {
+	color: red;
+}
+
+#tray {
+	margin: 0.25em 0.5em;
+	padding: 0 0;
+}
+
+#window {
+	font-size: 10px;
+	font-style: italic;
+	margin: 0 0.4em;
+}
+
+#custom-sysicon {
+	font-size: 14px;
+	padding: 0 0.25em;
+}
+
+#mpris {
+	font-size: 10px;
+	padding: 0 0.6em;
+	border-radius: 10px;
+	margin: 0.6em 0.3em;
+	background: alpha(@theme_base_color, 0.5);
+	border: 1px solid alpha(@unfocused_borders, 0.4);
+}
+
+#mpris.paused {
+	font-size: 10px;
+	margin: 0.8em -5px;
+	background-color: transparent;
+	border: none;
+}

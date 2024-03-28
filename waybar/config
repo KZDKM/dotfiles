@@ -1,0 +1,104 @@
+{
+    "layer": "top",
+    "output": "eDP-1",
+    "modules-left": [
+        "custom/sysicon",
+        "hyprland/workspaces",
+        "wlr/taskbar",
+        "hyprland/window"
+    ],
+    "modules-right": [
+    	"mpris",
+        "tray",
+        "pulseaudio",
+        "battery",
+        "clock"
+    ],
+    "height": 42,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "fixed-center": true,
+    "exclusive": false,
+    "wlr/taskbar": {
+        "format": "{icon}  {name}",
+        "active-first": true
+    },
+    "hyprland/workspaces": {
+        "format": " {windows} ",
+        "icon-size": 14,
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<firefox>": "",
+            "code": "",
+            "blackbox-terminal": "",
+            "evince": "",
+            "zathura": "",
+            "libreoffice": ""
+        },
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+	"reverse-direction": true
+    },
+    "pulseaudio": {
+        "format": "{volume}%  {icon}",
+        "format-bluetooth": "{volume}%  {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 25
+    },
+    "clock": {
+        "format": "{:%B %d %A %H:%M}"
+    },
+    "custom/sysicon": {
+        "format": ""
+    },
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "$1",
+            "Mozilla Firefox": "Loading...",
+            "(.*) - Visual Studio Code": "$1"
+        }
+    },
+    "mpris": {
+    	"format": "  {player}",
+	"format-paused": " "
+    }
+}
